@@ -1,0 +1,11 @@
+<launch>
+    <node pkg="example_controllers_pkg" exec="cartesian_velocity_controller_node" name="velocity_controller">
+      <param name="reference_pub_period" value="0.02"/> 
+      <param name="position_gain" value="1"/>  
+      <param name="orientation_gain" value="1"/>  
+      <param name="b_p_target" value="[0.3, 0.3, 0.7]"/>   <!-- Desired position for the end-effector--> 
+      <param name="b_R_target" value="[1, 0, 0, 
+                                      0, -1, 0, 
+                                      0, 0, -1]"/>      <!-- Desired orientation for the end-effector--> 
+    </node>
+</launch>

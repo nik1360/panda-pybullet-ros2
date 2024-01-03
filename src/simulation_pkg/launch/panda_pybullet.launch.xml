@@ -1,0 +1,12 @@
+<launch>
+    <node pkg="simulation_pkg" exec="panda_pybullet_node" name="panda_pybullet">
+      <param name="sim_duration" value="100.0"/>        <!-- Duration of the simulation-->
+      <param name="sim_timestep" value="0.01"/>         <!-- Dimulation timestep-->
+      <param name="enable_gravity" value="True"/>         <!-- Simulate gravity -->
+      <param name="use_gui" value="True"/>         <!-- Show PyBullet GUI -->
+      <param name="robot_urdf_path" value="/home/nikolas/UNIPV/panda-pybullet-ros2/src/simulation_pkg/pybullet_data/robots/franka_panda/panda_no_hand.urdf"/>
+      <param name="control_type" value="3"/>         <!-- 1:POSITION, 2:VELOCITY, 3:TORQUE -->
+      <param name="joint_friction_coeff" value="1.5"/>      <!-- Simulated frctions when using torque control -->
+      <param name="status_publish_period" value="0.01"/>         <!-- How often the robot status is published -->
+    </node>
+</launch>

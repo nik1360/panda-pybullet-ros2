@@ -1,0 +1,8 @@
+<launch>
+    <node pkg="example_controllers_pkg" exec="torque_control_node" name="torque_controller">
+      <param name="reference_pub_period" value="0.02"/> 
+      <param name="proportional_gain" value="10"/>  
+      <param name="damping_gain" value="5"/>  
+      <param name="q_target" value="[0, 0, 0, 0, 0, 0, 0]"/>      
+    </node>
+</launch>

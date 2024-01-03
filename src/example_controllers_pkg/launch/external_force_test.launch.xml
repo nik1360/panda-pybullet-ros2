@@ -1,0 +1,15 @@
+<launch>
+    <node pkg="example_controllers_pkg" exec="torque_control_node" name="torque_controller">
+      <param name="reference_pub_period" value="0.02"/> 
+      <param name="proportional_gain" value="0"/>  
+      <param name="damping_gain" value="0"/>  
+      <param name="q_target" value="[0, -45, 0, -135, 0, 90, 0]"/>      
+    </node>
+
+    <node pkg="example_controllers_pkg" exec="external_force_node" name="external_force">
+      <param name="force_generation_period" value="0.02"/> 
+      <param name="force_x" value="0"/> 
+      <param name="force_y" value="5"/> 
+      <param name="force_z" value="0"/>    
+    </node>
+</launch>
